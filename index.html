@@ -1,77 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sandip Kabiraz - Full-Stack Developer</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #222; color: white; padding: 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2rem; }
-    header p { margin: 5px 0; font-size: 1.1rem; }
-    section { padding: 20px; max-width: 900px; margin: auto; }
-    h2 { border-bottom: 2px solid #ddd; padding-bottom: 5px; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 8px; }
-    .project { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #222; color: white; text-align: center; padding: 15px; margin-top: 20px; }
-    a { color: #007acc; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandip Kabiraz - Senior Full-Stack & Reporting Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .section-title {
+            border-bottom: 2px solid #3b82f6; /* Blue-500 */
+            padding-bottom: 0.5rem;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #e5e7eb; /* Gray-200 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
 </head>
-<body>
+<body class="text-gray-800">
 
-<header>
-  <h1>Sandip Kabiraz</h1>
-  <p>Full-Stack Developer & Reporting Specialist | .NET | SQL Server | Vue 3 | Node.js</p>
-  <p>
-    <a href="mailto:sandip.kabiraz.bd@gmail.com" style="color:white;">Email</a> |
-    <a href="https://linkedin.com/in/sandipkabiraz" style="color:white;">LinkedIn</a> |
-    <a href="https://github.com/YOUR_GITHUB_USERNAME" style="color:white;">GitHub</a>
-  </p>
-</header>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Sandip Kabiraz</a>
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-500 transition">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-500 transition">Skills</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-100">Skills</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>Full-Stack Developer and Reporting Specialist with 10+ years of experience delivering backend systems, enterprise reporting, and compensation management solutions. Proven success in global projects for Nomura, KKR, Golub, and Greystone. Skilled in .NET, SQL Server, RDLC, Vue 3, Node.js, and Power BI, with a focus on scalable, data-driven applications.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Senior Full-Stack & Reporting Engineer
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    10+ years of experience translating complex business requirements into robust software and actionable data visualizations for global firms like KKR and Nomura.
+                </p>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://linkedin.com/in/sandipkabiraz" target="_blank" class="text-gray-600 hover:text-blue-500 transition text-3xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sandy1else" target="_blank" class="text-gray-600 hover:text-blue-500 transition text-3xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.hackerrank.com/Sandy1else" target="_blank" class="text-gray-600 hover:text-blue-500 transition text-3xl">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Languages: C#, SQL, JavaScript, TypeScript</li>
-    <li>Frameworks & Libraries: ASP.NET, Node.js, Vue 3, Bootstrap, D3.js</li>
-    <li>Reporting & BI: RDLC, Power BI, Apache Superset</li>
-    <li>Databases: SQL Server, PostgreSQL</li>
-    <li>Tools: Visual Studio, Git, Jira, Trello</li>
-    <li>Methodologies: Agile/Scrum, Remote Collaboration</li>
-  </ul>
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 section-title inline-block">About Me</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-700 mb-4">
+                        I am a Senior Software Engineer with over a decade of experience, passionate about solving complex data and reporting challenges for large organizations. My expertise lies in the .NET framework and SQL Server, where I've designed and delivered critical components for compensation management systems and ERPs.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        I've had the privilege of contributing to successful Beqom implementations for global financial leaders like **Nomura** and **KKR**, focusing on creating precise, high-stakes financial reports and ensuring seamless data integration.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        While my foundation is in the .NET ecosystem, I am also proficient with modern frontend frameworks like **Vue.js** and data visualization tools like **D3.js** and **Power BI**. I am a firm believer in leveraging AI tools like GitHub Copilot and Gemini to accelerate development and improve code quality.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        I am currently seeking opportunities where I can leverage my full-stack and data expertise to lead projects, mentor teams, and architect resilient, scalable software solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <h2>Projects</h2>
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 section-title inline-block">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-  <div class="project">
-    <h3>Beqom Compensation Dashboard (KKR)</h3>
-    <p>Designed and implemented advanced dashboards using RDLC, SQL Server, and Beqom for global financial client KKR.</p>
-  </div>
+                    <!-- Project 1 -->
+                    <div class="card rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Data+Flow+Diagram" alt="Data Flow Diagram for Reporting System" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Enterprise Compensation Reporting</h3>
+                            <p class="text-sm text-gray-500 mb-4">Clients: Nomura, KKR, Golub, Greystone</p>
+                            <p class="text-gray-700 mb-4">
+                                <strong class="block text-gray-800">The Challenge:</strong> Global financial firms require highly secure, accurate, and complex reporting systems. The challenge was to integrate with the Beqom platform to develop dozens of custom reports that handled intricate business rules and massive datasets.
+                            </p>
+                            <p class="text-gray-700">
+                                <strong class="block text-gray-800">My Solution & Contributions:</strong> Designed and optimized numerous SQL Server stored procedures, developed over 30 unique RDLC reports, and took full ownership of reporting deliverables for the Nomura rollout, from requirements to deployment.
+                            </p>
+                            <div class="mt-6">
+                                <h4 class="font-semibold mb-2">Technologies Used:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">C#</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">.NET</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">SQL Server</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">T-SQL</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">RDLC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <div class="project">
-    <h3>Internal Reporting Platform</h3>
-    <p>Built a web-based reporting tool with Vue 3, Node.js, and D3.js, allowing drag-and-drop report creation and live data visualization.</p>
-  </div>
+                    <!-- Project 2 -->
+                    <div class="card rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=LiveQuery+UI" alt="LiveQuery UI Screenshot" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">LiveQuery - Self-Service Reporting Tool</h3>
+                            <p class="text-sm text-gray-500 mb-4">Internal Project</p>
+                            <p class="text-gray-700 mb-4">
+                                <strong class="block text-gray-800">The Challenge:</strong> Internal teams needed a way to quickly query databases and visualize data without writing SQL. The goal was to create a user-friendly, web-based tool for non-technical users to build their own reports.
+                            </p>
+                            <p class="text-gray-700">
+                                <strong class="block text-gray-800">My Solution & Contributions:</strong> Single-handedly designed and built the entire application with a Node.js backend and a Vue 3 frontend. Created a drag-and-drop interface using Vue Flow and integrated D3.js for data visualization.
+                            </p>
+                            <div class="mt-6">
+                                <h4 class="font-semibold mb-2">Technologies Used:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue 3</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">D3.js</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue Flow</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="project">
-    <h3>Loan Approval Prediction System</h3>
-    <p>Developed machine learning models (Logistic Regression, XGBoost) for loan approval prediction and integrated results into Power BI dashboards.</p>
-  </div>
+        <!-- Skills & Expertise Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 section-title inline-block">Skills & Expertise</h2>
+                <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Languages</h4>
+                        <p class="text-gray-600">C#, SQL, JavaScript, TypeScript</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Backend</h4>
+                        <p class="text-gray-600">ASP.NET, .NET Core, Node.js</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Frontend & Viz</h4>
+                        <p class="text-gray-600">Vue 3, D3.js, Power BI, RDLC</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Databases</h4>
+                        <p class="text-gray-600">SQL Server, PostgreSQL</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Dev Tools</h4>
+                        <p class="text-gray-600">Visual Studio, Git, GitHub, Jira</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">AI Tools</h4>
+                        <p class="text-gray-600">GitHub Copilot, Gemini</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Methodologies</h4>
+                        <p class="text-gray-600">Agile, Scrum</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2">Domain Expertise</h4>
+                        <p class="text-gray-600">Compensation Management, Financial Reporting, University ERPs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <h2>Experience</h2>
-  <p><strong>Senior Software Engineer (Remote)</strong> – Periscope Labs / TCT Inc. (2021–Present)</p>
-  <p><strong>Senior Software Engineer</strong> – Edusoft Consultants Ltd (2015–2019)</p>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    I'm currently open to new opportunities. If you have a project in mind or just want to connect, feel free to reach out.
+                </p>
+                <a href="mailto:sandip.kabiraz.bd@gmail.com" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition text-lg">
+                    sandip.kabiraz.bd@gmail.com
+                </a>
+            </div>
+        </section>
+    </main>
 
-  <h2>Education</h2>
-  <p>B.Sc. in Computer Science & Engineering – United International University, CGPA 3.71/4.00</p>
-</section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                 <a href="https://linkedin.com/in/sandipkabiraz" target="_blank" class="text-gray-400 hover:text-white transition mx-3 text-xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sandy1else" target="_blank" class="text-gray-400 hover:text-white transition mx-3 text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.hackerrank.com/Sandy1else" target="_blank" class="text-gray-400 hover:text-white transition mx-3 text-xl">
+                    <i class="fab fa-hackerrank"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Sandip Kabiraz. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<footer>
-  <p>&copy; 2025 Sandip Kabiraz | Portfolio</p>
-</footer>
-
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
