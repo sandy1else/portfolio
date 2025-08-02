@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +17,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --background-color-light: #f8fafc; /* slate-50 */
-            --background-color-dark: #0f172a; /* slate-900 */
+            --background-color-light: #f8fafc;
+            /* slate-50 */
+            --background-color-dark: #0f172a;
+            /* slate-900 */
         }
 
         body {
@@ -33,9 +36,17 @@
         }
 
         @keyframes Gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* --- Timeline Styling --- */
@@ -43,6 +54,7 @@
             position: relative;
             padding-left: 2rem;
         }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -51,8 +63,10 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: #2563eb; /* blue-600 */
+            background-color: #2563eb;
+            /* blue-600 */
         }
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -60,8 +74,10 @@
             top: 0.5rem;
             height: 100%;
             width: 2px;
-            background-color: #475569; /* slate-600 */
+            background-color: #475569;
+            /* slate-600 */
         }
+
         .timeline-item:last-child::after {
             height: calc(100% - 1.5rem);
         }
@@ -71,21 +87,30 @@
 <body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
 
     <!-- Theme Toggle Button -->
-    <button id="theme-toggle" aria-label="Toggle dark/light theme" class="fixed z-50 bottom-4 right-4 p-3 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 shadow-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors duration-300">
+    <button id="theme-toggle" aria-label="Toggle dark/light theme"
+        class="fixed z-50 bottom-4 right-4 p-3 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 shadow-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors duration-300">
         <!-- Moon Icon (Dark Mode) -->
-        <svg id="moon-icon" class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        <svg id="moon-icon" class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
         </svg>
         <!-- Sun Icon (Light Mode) -->
-        <svg id="sun-icon" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        <svg id="sun-icon" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
         </svg>
     </button>
 
     <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-md transition-colors duration-300">
+    <header
+        class="fixed top-0 left-0 right-0 z-40 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-md transition-colors duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl md:text-2xl font-bold text-blue-600 hover:text-blue-500 transition-colors duration-300">Sandip Kabiraz</a>
+            <a href="#"
+                class="text-xl md:text-2xl font-bold text-blue-600 hover:text-blue-500 transition-colors duration-300">Sandip
+                Kabiraz</a>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#about" class="hover:text-blue-600 transition-colors duration-300">About</a></li>
                 <li><a href="#projects" class="hover:text-blue-600 transition-colors duration-300">Projects</a></li>
@@ -102,11 +127,19 @@
         <section id="hero" class="hero-bg min-h-screen flex items-center justify-center p-6 text-white text-center">
             <div class="max-w-4xl">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">Sandip Kabiraz</h1>
-                <h2 class="text-xl md:text-2xl text-blue-300 font-medium mb-6">Full-Stack Developer & Reporting Specialist</h2>
-                <p class="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed">10+ years of experience building backend systems, enterprise reporting, and compensation dashboards for global financial clients. Specialized in .NET, SQL Server, RDLC, Vue 3, and Power BI.</p>
+                <h2 class="text-xl md:text-2xl text-blue-300 font-medium mb-6">Full-Stack Developer & Reporting
+                    Specialist</h2>
+                <p class="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed">10+ years of experience building
+                    backend systems, enterprise reporting, and compensation dashboards for global financial clients.
+                    Specialized in .NET, SQL Server, RDLC, Vue 3, and Power BI.</p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="https://docs.google.com/document/d/e/2PACX-1vQnBwIaR6G_v5fO2KQESJHVIbSAi1TXJNcoakCRuKMocgZexmbKaSls0Y5pEQ-zG034_iUzNk9V-J2i/pub" download="Sandip_Kabiraz_CV.pdf" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-transform duration-300 transform hover:scale-105 shadow-lg">Download CV</a>
-                    <a href="#projects" class="bg-transparent border border-blue-400 text-blue-300 font-bold py-3 px-8 rounded-full hover:bg-blue-600 hover:text-white transition-transform duration-300 transform hover:scale-105 shadow-lg">View Projects</a>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vQnBwIaR6G_v5fO2KQESJHVIbSAi1TXJNcoakCRuKMocgZexmbKaSls0Y5pEQ-zG034_iUzNk9V-J2i/pub"
+                        download="Sandip_Kabiraz_CV.pdf"
+                        class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-transform duration-300 transform hover:scale-105 shadow-lg">Download
+                        CV</a>
+                    <a href="#projects"
+                        class="bg-transparent border border-blue-400 text-blue-300 font-bold py-3 px-8 rounded-full hover:bg-blue-600 hover:text-white transition-transform duration-300 transform hover:scale-105 shadow-lg">View
+                        Projects</a>
                 </div>
             </div>
         </section>
@@ -117,13 +150,22 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
                     <!-- Headshot Placeholder -->
-                    <div class="flex-shrink-0 w-48 h-48 rounded-full overflow-hidden bg-slate-300 dark:bg-slate-700 shadow-xl">
-                        <img src="https://drive.google.com/file/d/1k3mclQW-TCV0l9kYdyk7gPG8gXgHvcbu/view?usp=drive_link" alt="Professional headshot of Sandip Kabiraz" class="w-full h-full object-cover">
+                    <div
+                        class="flex-shrink-0 w-48 h-48 rounded-full overflow-hidden bg-slate-300 dark:bg-slate-700 shadow-xl">
+                        <img src="images\sandip_kabiraz_software_developer.jpg"
+                            alt="Professional headshot of Sandip Kabiraz" class="w-full h-full object-cover">
                     </div>
                     <!-- Bio Content -->
                     <div class="flex-1 text-center md:text-left">
-                        <p class="text-lg mb-4">I am a dedicated Senior Software Engineer with a deep-rooted passion for creating clean, scalable solutions. My journey has taken me from building university ERP systems to implementing high-stakes compensation platforms for global financial giants like Nomura and KKR using Beqom. I pride myself on my ability to translate complex business logic into efficient SQL stored procedures and intuitive RDLC reports.</p>
-                        <p class="text-lg">In today's dynamic tech landscape, I continuously leverage AI tools like GitHub Copilot and Gemini to enhance my productivity and explore new problem-solving avenues, ensuring I remain at the forefront of innovation. I am a proven remote collaborator who thrives in agile environments.</p>
+                        <p class="text-lg mb-4">I am a dedicated Senior Software Engineer with a deep-rooted passion for
+                            creating clean, scalable solutions. My journey has taken me from building university ERP
+                            systems to implementing high-stakes compensation platforms for global financial giants like
+                            Nomura and KKR using Beqom. I pride myself on my ability to translate complex business logic
+                            into efficient SQL stored procedures and intuitive RDLC reports.</p>
+                        <p class="text-lg">In today's dynamic tech landscape, I continuously leverage AI tools like
+                            GitHub Copilot and Gemini to enhance my productivity and explore new problem-solving
+                            avenues, ensuring I remain at the forefront of innovation. I am a proven remote collaborator
+                            who thrives in agile environments.</p>
                     </div>
                 </div>
             </div>
@@ -136,40 +178,68 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <!-- Project 1 Card -->
-                    <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold mb-2">Beqom Reporting & Integration</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Senior Software Engineer @ KKR, Nomura | 2021-Present</p>
-                        <p class="text-base mb-4">Engineered and maintained a suite of critical RDLC and SQL-based reports for Beqom, a leading compensation management platform. Developed custom payout systems and grids, ensuring high data accuracy and performance for multinational clients like Nomura and KKR.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Senior Software Engineer @ KKR,
+                            Nomura | 2021-Present</p>
+                        <p class="text-base mb-4">Engineered and maintained a suite of critical RDLC and SQL-based
+                            reports for Beqom, a leading compensation management platform. Developed custom payout
+                            systems and grids, ensuring high data accuracy and performance for multinational clients
+                            like Nomura and KKR.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Beqom</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">SQL Server</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">RDLC</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">C#</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Beqom</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">SQL
+                                Server</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">RDLC</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">C#</span>
                         </div>
                     </div>
 
                     <!-- Project 2 Card -->
-                    <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold mb-2">Internal Reporting Platform</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Fullstack Developer | Nov 2024 - Jan 2025</p>
-                        <p class="text-base mb-4">Engineered a dynamic dashboard builder using Vue 3 and Node.js. Utilized Vue Flow for a visual data pipeline interface and D3.js for custom data visualizations.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Fullstack Developer | Nov 2024 - Jan
+                            2025</p>
+                        <p class="text-base mb-4">Engineered a dynamic dashboard builder using Vue 3 and Node.js.
+                            Utilized Vue Flow for a visual data pipeline interface and D3.js for custom data
+                            visualizations.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue 3</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">D3.js</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue Flow</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue
+                                3</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">D3.js</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Vue
+                                Flow</span>
                         </div>
                     </div>
 
                     <!-- Project 3 Card -->
-                    <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold mb-2">Loan Prediction System</h3>
                         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">AI/ML Developer | Early 2025</p>
-                        <p class="text-base mb-4">Developed and integrated a machine learning model for loan approval prediction, using XGBoost and Logistic Regression. Integrated the model's output into a Power BI dashboard for business users.</p>
+                        <p class="text-base mb-4">Developed and integrated a machine learning model for loan approval
+                            prediction, using XGBoost and Logistic Regression. Integrated the model's output into a
+                            Power BI dashboard for business users.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">XGBoost</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Logistic Regression</span>
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Power BI</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">XGBoost</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Logistic
+                                Regression</span>
+                            <span
+                                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded-full">Power
+                                BI</span>
                         </div>
                     </div>
 
@@ -182,15 +252,19 @@
             <div class="container mx-auto px-6 max-w-6xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Expertise</h2>
                 <div class="space-y-12">
-                    
+
                     <!-- Languages -->
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-blue-600">Languages</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">C#</span>
-                            <span class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">SQL</span>
-                            <span class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">JavaScript</span>
-                            <span class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">TypeScript</span>
+                            <span
+                                class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">C#</span>
+                            <span
+                                class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">SQL</span>
+                            <span
+                                class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">JavaScript</span>
+                            <span
+                                class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-4 py-2 rounded-full font-medium">TypeScript</span>
                         </div>
                     </div>
 
@@ -198,11 +272,17 @@
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-emerald-600">Frameworks</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">ASP.NET</span>
-                            <span class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Node.js</span>
-                            <span class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Vue 3</span>
-                            <span class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Bootstrap</span>
-                            <span class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">D3.js</span>
+                            <span
+                                class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">ASP.NET</span>
+                            <span
+                                class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Node.js</span>
+                            <span
+                                class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Vue
+                                3</span>
+                            <span
+                                class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">Bootstrap</span>
+                            <span
+                                class="bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 px-4 py-2 rounded-full font-medium">D3.js</span>
                         </div>
                     </div>
 
@@ -210,10 +290,17 @@
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-purple-600">Reporting & BI</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">RDLC</span>
-                            <span class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Power BI</span>
-                            <span class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Apache Superset</span>
-                            <span class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Report Builder</span>
+                            <span
+                                class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">RDLC</span>
+                            <span
+                                class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Power
+                                BI</span>
+                            <span
+                                class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Apache
+                                Superset</span>
+                            <span
+                                class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-4 py-2 rounded-full font-medium">Report
+                                Builder</span>
                         </div>
                     </div>
 
@@ -221,24 +308,39 @@
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-rose-600">Databases</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-rose-200 dark:bg-rose-800 text-rose-900 dark:text-rose-100 px-4 py-2 rounded-full font-medium">SQL Server</span>
-                            <span class="bg-rose-200 dark:bg-rose-800 text-rose-900 dark:text-rose-100 px-4 py-2 rounded-full font-medium">PostgreSQL</span>
+                            <span
+                                class="bg-rose-200 dark:bg-rose-800 text-rose-900 dark:text-rose-100 px-4 py-2 rounded-full font-medium">SQL
+                                Server</span>
+                            <span
+                                class="bg-rose-200 dark:bg-rose-800 text-rose-900 dark:text-rose-100 px-4 py-2 rounded-full font-medium">PostgreSQL</span>
                         </div>
                     </div>
-                    
+
                     <!-- Tools & Platforms -->
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-yellow-600">Tools & Platforms</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Git</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Jira</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Visual Studio</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Azure Virtual Desktop</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">ChatGPT</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">GitHub Copilot</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Gemini</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">DeepSeek</span>
-                            <span class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Grok</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Git</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Jira</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Visual
+                                Studio</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Azure
+                                Virtual Desktop</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">ChatGPT</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">GitHub
+                                Copilot</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Gemini</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">DeepSeek</span>
+                            <span
+                                class="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-4 py-2 rounded-full font-medium">Grok</span>
                         </div>
                     </div>
 
@@ -246,9 +348,15 @@
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-teal-600">Domain Expertise</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">Compensation Systems</span>
-                            <span class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">Financial Reporting</span>
-                            <span class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">University ERP</span>
+                            <span
+                                class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">Compensation
+                                Systems</span>
+                            <span
+                                class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">Financial
+                                Reporting</span>
+                            <span
+                                class="bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100 px-4 py-2 rounded-full font-medium">University
+                                ERP</span>
                         </div>
                     </div>
 
@@ -261,22 +369,30 @@
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Professional Experience</h2>
                 <div class="space-y-12">
-                    
+
                     <!-- Periscope Labs -->
                     <div class="timeline-item">
-                        <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
+                        <div
+                            class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
                             <h3 class="text-xl font-bold text-blue-600">Senior Software Engineer @ Periscope Labs</h3>
                             <p class="text-sm text-slate-500 dark:text-slate-400">2021 – Present</p>
-                            <p class="mt-4">Spearheaded the development and maintenance of Beqom reporting solutions for key clients including KKR and Nomura. Key contributions included creating custom payout systems, interactive dashboards, and performance-optimized grids. Also led development on an internal reporting platform and an AI-driven loan prediction system.</p>
+                            <p class="mt-4">Spearheaded the development and maintenance of Beqom reporting solutions for
+                                key clients including KKR and Nomura. Key contributions included creating custom payout
+                                systems, interactive dashboards, and performance-optimized grids. Also led development
+                                on an internal reporting platform and an AI-driven loan prediction system.</p>
                         </div>
                     </div>
 
                     <!-- Edusoft Consultants -->
                     <div class="timeline-item">
-                        <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
-                            <h3 class="text-xl font-bold text-blue-600">Senior Software Engineer @ Edusoft Consultants</h3>
+                        <div
+                            class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
+                            <h3 class="text-xl font-bold text-blue-600">Senior Software Engineer @ Edusoft Consultants
+                            </h3>
                             <p class="text-sm text-slate-500 dark:text-slate-400">2015 – 2019</p>
-                            <p class="mt-4">Responsible for the end-to-end development of ERP systems for over 10 universities. Designed and optimized SQL Server backends, and built a wide range of mission-critical RDLC reports.</p>
+                            <p class="mt-4">Responsible for the end-to-end development of ERP systems for over 10
+                                universities. Designed and optimized SQL Server backends, and built a wide range of
+                                mission-critical RDLC reports.</p>
                         </div>
                     </div>
 
@@ -289,20 +405,26 @@
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Education & Certifications</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    
+
                     <!-- Education Card -->
-                    <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-900 shadow-md border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="rounded-xl p-6 bg-slate-100 dark:bg-slate-900 shadow-md border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold text-blue-600">BSc in Computer Science and Engineering</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">United International University — Dhaka, Bangladesh</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">United International University — Dhaka,
+                            Bangladesh</p>
                         <p class="text-sm text-slate-500 dark:text-slate-400">CGPA: 3.71 / 4.00</p>
                         <p class="text-sm text-slate-500 dark:text-slate-400">March 2011 – September 2019</p>
                     </div>
 
                     <!-- Publication Card -->
-                    <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-900 shadow-md border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="rounded-xl p-6 bg-slate-100 dark:bg-slate-900 shadow-md border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold text-blue-600">Publication</h3>
-                        <p class="mt-2"><span class="font-medium">Paper:</span> ICCIT 2018 – IEEE Indexed Paper on Computer Vision</p>
-                        <a href="https://ieeexplore.ieee.org/document/8631966" target="_blank" class="mt-2 inline-block text-blue-600 hover:text-blue-500 transition-colors duration-300">IEEE Link</a>
+                        <p class="mt-2"><span class="font-medium">Paper:</span> ICCIT 2018 – IEEE Indexed Paper on
+                            Computer Vision</p>
+                        <a href="https://ieeexplore.ieee.org/document/8631966" target="_blank"
+                            class="mt-2 inline-block text-blue-600 hover:text-blue-500 transition-colors duration-300">IEEE
+                            Link</a>
                     </div>
                 </div>
             </div>
@@ -313,66 +435,100 @@
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get in Touch</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    
+
                     <!-- Contact Form -->
-                    <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
+                    <div
+                        class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700">
                         <h3 class="text-2xl font-semibold mb-6 text-blue-600">Send me a message</h3>
                         <form action="#" method="POST" class="space-y-4">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
-                                <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100">
+                                <label for="name"
+                                    class="block text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
-                                <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100">
+                                <label for="email"
+                                    class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100">
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
-                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100"></textarea>
+                                <label for="message"
+                                    class="block text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
+                                <textarea id="message" name="message" rows="4"
+                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900 dark:text-slate-100"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-full hover:bg-blue-700 transition-colors duration-300">Send Message</button>
-                            <p class="text-sm text-center text-slate-500 dark:text-slate-400 mt-2">This form is for demonstration purposes only.</p>
+                            <button type="submit"
+                                class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-full hover:bg-blue-700 transition-colors duration-300">Send
+                                Message</button>
+                            <p class="text-sm text-center text-slate-500 dark:text-slate-400 mt-2">This form is for
+                                demonstration purposes only.</p>
                         </form>
                     </div>
 
                     <!-- Direct Contact Info -->
-                    <div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 space-y-6">
+                    <div
+                        class="rounded-xl p-6 bg-slate-100 dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 space-y-6">
                         <h3 class="text-2xl font-semibold mb-6 text-blue-600">My Details</h3>
                         <div class="flex items-center space-x-4">
-                            <a href="mailto:sandip.kabiraz.bd@gmail.com" class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.003 5.884L10 9.882l-7.997 3.998A2 2 0 012 11.886v-6c0-.584.29-1.12.77-1.424L2.003 5.884zM22 11.886v-6a2 2 0 00-2-2H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2l-7.997-3.998L22 5.884zM12 12c.5 0 .9-.224 1.2-.596l7.997-3.998a1 1 0 00-.77-1.424L4 4.464l7.23 3.615c.3.15.688.15.988 0l7.23-3.615a1 1 0 00-1.77.728l-7.997 3.998A1 1 0 0112 12z"></path>
-                                    <path d="M12 13a1 1 0 01-.97-.732L2.003 7.28l-.004-.002A2 2 0 014 4.5h16a2 2 0 012 2v.784L12.97 12.268A1 1 0 0112 13z"></path>
+                            <a href="mailto:sandip.kabiraz.bd@gmail.com"
+                                class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.003 5.884L10 9.882l-7.997 3.998A2 2 0 012 11.886v-6c0-.584.29-1.12.77-1.424L2.003 5.884zM22 11.886v-6a2 2 0 00-2-2H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2l-7.997-3.998L22 5.884zM12 12c.5 0 .9-.224 1.2-.596l7.997-3.998a1 1 0 00-.77-1.424L4 4.464l7.23 3.615c.3.15.688.15.988 0l7.23-3.615a1 1 0 00-1.77.728l-7.997 3.998A1 1 0 0112 12z">
+                                    </path>
+                                    <path
+                                        d="M12 13a1 1 0 01-.97-.732L2.003 7.28l-.004-.002A2 2 0 014 4.5h16a2 2 0 012 2v.784L12.97 12.268A1 1 0 0112 13z">
+                                    </path>
                                 </svg>
                             </a>
-                            <a href="mailto:sandip.kabiraz.bd@gmail.com" class="hover:text-blue-600 transition-colors duration-300">sandip.kabiraz.bd@gmail.com</a>
+                            <a href="mailto:sandip.kabiraz.bd@gmail.com"
+                                class="hover:text-blue-600 transition-colors duration-300">sandip.kabiraz.bd@gmail.com</a>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <a href="tel:+8801720467455" class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 2c-.552 0-1 .448-1 1v18c0 .552.448 1 1 1h14c.552 0 1-.448 1-1V3c0-.552-.448-1-1-1H5zm10 17h-6c-.552 0-1 .448-1 1s.448 1 1 1h6c.552 0 1-.448 1-1s-.448-1-1-1zM12 4a1 1 0 100 2 1 1 0 000-2z"></path>
+                            <a href="tel:+8801720467455"
+                                class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5 2c-.552 0-1 .448-1 1v18c0 .552.448 1 1 1h14c.552 0 1-.448 1-1V3c0-.552-.448-1-1-1H5zm10 17h-6c-.552 0-1 .448-1 1s.448 1 1 1h6c.552 0 1-.448 1-1s-.448-1-1-1zM12 4a1 1 0 100 2 1 1 0 000-2z">
+                                    </path>
                                     <path d="M12 17a1 1 0 100 2 1 1 0 000-2z"></path>
-                                    <path d="M16 11c0-2.206-1.794-4-4-4S8 8.794 8 11s1.794 4 4 4 4-1.794 4-4zm-2 0c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2z"></path>
+                                    <path
+                                        d="M16 11c0-2.206-1.794-4-4-4S8 8.794 8 11s1.794 4 4 4 4-1.794 4-4zm-2 0c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2z">
+                                    </path>
                                 </svg>
                             </a>
-                            <a href="tel:+8801720467455" class="hover:text-blue-600 transition-colors duration-300">(+880) 1720467455</a>
+                            <a href="tel:+8801720467455"
+                                class="hover:text-blue-600 transition-colors duration-300">(+880) 1720467455</a>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <a href="https://linkedin.com/in/sandipkabiraz" target="_blank" class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM6 9h4v12H6zM4 4h4v4H4z"></path>
+                            <a href="https://linkedin.com/in/sandipkabiraz" target="_blank"
+                                class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM6 9h4v12H6zM4 4h4v4H4z">
+                                    </path>
                                 </svg>
                             </a>
-                            <a href="https://linkedin.com/in/sandipkabiraz" target="_blank" class="hover:text-blue-600 transition-colors duration-300">linkedin.com/in/sandipkabiraz</a>
+                            <a href="https://linkedin.com/in/sandipkabiraz" target="_blank"
+                                class="hover:text-blue-600 transition-colors duration-300">linkedin.com/in/sandipkabiraz</a>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <a href="https://www.hackerrank.com/Sandy1else" target="_blank" class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z"></path>
+                            <a href="https://www.hackerrank.com/Sandy1else" target="_blank"
+                                class="text-blue-600 hover:text-blue-500 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z">
+                                    </path>
                                     <path d="M12 8a4 4 0 104 4 4 4 0 00-4-4zm0 6a2 2 0 112-2 2 2 0 01-2 2z"></path>
                                 </svg>
                             </a>
-                            <a href="https://www.hackerrank.com/Sandy1else" target="_blank" class="hover:text-blue-600 transition-colors duration-300">hackerrank.com/Sandy1else</a>
+                            <a href="https://www.hackerrank.com/Sandy1else" target="_blank"
+                                class="hover:text-blue-600 transition-colors duration-300">hackerrank.com/Sandy1else</a>
                         </div>
                     </div>
                 </div>
@@ -420,6 +576,5 @@
         });
     </script>
 </body>
+
 </html>
-
-
